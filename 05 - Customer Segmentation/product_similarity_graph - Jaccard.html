@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: white;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"size": 200}, "id": "4RC1", "label": "4RC1", "shape": "dot", "title": "4RC1"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "4RCE", "label": "4RCE", "shape": "dot", "title": "4RCE"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "4RCR", "label": "4RCR", "shape": "dot", "title": "4RCR"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "5CQCCR", "label": "5CQCCR", "shape": "dot", "title": "5CQCCR"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "EJJ3", "label": "EJJ3", "shape": "dot", "title": "EJJ3"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "BCQCCE", "label": "BCQCCE", "shape": "dot", "title": "BCQCCE"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "E1CW", "label": "E1CW", "shape": "dot", "title": "E1CW"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "EJJJ", "label": "EJJJ", "shape": "dot", "title": "EJJJ"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "EJJQ", "label": "EJJQ", "shape": "dot", "title": "EJJQ"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4C33", "label": "KC4C33", "shape": "dot", "title": "KC4C33"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4CC3", "label": "KC4CC3", "shape": "dot", "title": "KC4CC3"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4CCZ", "label": "KC4CCZ", "shape": "dot", "title": "KC4CCZ"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4CJ4", "label": "KC4CJ4", "shape": "dot", "title": "KC4CJ4"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4CJC", "label": "KC4CJC", "shape": "dot", "title": "KC4CJC"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4C41", "label": "KC4C41", "shape": "dot", "title": "KC4C41"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4C44", "label": "KC4C44", "shape": "dot", "title": "KC4C44"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4C4C", "label": "KC4C4C", "shape": "dot", "title": "KC4C4C"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4C4E", "label": "KC4C4E", "shape": "dot", "title": "KC4C4E"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4C4R", "label": "KC4C4R", "shape": "dot", "title": "KC4C4R"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4CCJ", "label": "KC4CCJ", "shape": "dot", "title": "KC4CCJ"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4CCQ", "label": "KC4CCQ", "shape": "dot", "title": "KC4CCQ"}, {"color": "#97c2fc", "font": {"size": 200}, "id": "KC4CCW", "label": "KC4CCW", "shape": "dot", "title": "KC4CCW"}]);
+                  edges = new vis.DataSet([{"font": {"size": 200}, "from": "4RC1", "title": "Jaccard: 1.00", "to": "4RCE", "value": 1.0}, {"font": {"size": 200}, "from": "4RC1", "title": "Jaccard: 1.00", "to": "4RCR", "value": 1.0}, {"font": {"size": 200}, "from": "4RCE", "title": "Jaccard: 1.00", "to": "4RCR", "value": 1.0}, {"font": {"size": 200}, "from": "5CQCCR", "title": "Jaccard: 0.62", "to": "EJJ3", "value": 0.6229508196721312}, {"font": {"size": 200}, "from": "BCQCCE", "title": "Jaccard: 1.00", "to": "E1CW", "value": 1.0}, {"font": {"size": 200}, "from": "EJJJ", "title": "Jaccard: 0.86", "to": "EJJQ", "value": 0.8571428571428571}, {"font": {"size": 200}, "from": "KC4C33", "title": "Jaccard: 0.60", "to": "KC4CC3", "value": 0.603448275862069}, {"font": {"size": 200}, "from": "KC4C33", "title": "Jaccard: 0.62", "to": "KC4CCZ", "value": 0.6206896551724138}, {"font": {"size": 200}, "from": "KC4C33", "title": "Jaccard: 0.63", "to": "KC4CJ4", "value": 0.627906976744186}, {"font": {"size": 200}, "from": "KC4C33", "title": "Jaccard: 0.62", "to": "KC4CJC", "value": 0.6226415094339622}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.79", "to": "KC4C41", "value": 0.7941176470588235}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.77", "to": "KC4C44", "value": 0.7681159420289855}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.78", "to": "KC4C4C", "value": 0.782608695652174}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.80", "to": "KC4C4E", "value": 0.8}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.82", "to": "KC4C4R", "value": 0.8181818181818182}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.84", "to": "KC4CCJ", "value": 0.8387096774193549}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.84", "to": "KC4CCQ", "value": 0.8387096774193549}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.81", "to": "KC4CCW", "value": 0.8125}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.88", "to": "KC4CCZ", "value": 0.8833333333333333}, {"font": {"size": 200}, "from": "KC4CC3", "title": "Jaccard: 0.62", "to": "KC4CJC", "value": 0.6153846153846154}, {"font": {"size": 200}, "from": "KC4CCZ", "title": "Jaccard: 0.78", "to": "KC4C41", "value": 0.782608695652174}, {"font": {"size": 200}, "from": "KC4CCZ", "title": "Jaccard: 0.78", "to": "KC4C44", "value": 0.782608695652174}, {"font": {"size": 200}, "from": "KC4CCZ", "title": "Jaccard: 0.80", "to": "KC4C4C", "value": 0.7971014492753623}, {"font": {"size": 200}, "from": "KC4CCZ", "title": "Jaccard: 0.82", "to": "KC4C4E", "value": 0.8153846153846154}, {"font": {"size": 200}, "from": "KC4CCZ", "title": "Jaccard: 0.83", "to": "KC4C4R", "value": 0.8333333333333334}, {"font": {"size": 200}, "from": "KC4CCZ", "title": "Jaccard: 0.80", "to": "KC4CCJ", "value": 0.796875}, {"font": {"size": 200}, "from": "KC4CCZ", "title": "Jaccard: 0.92", "to": "KC4CCQ", "value": 0.9166666666666666}, {"font": {"size": 200}, "from": "KC4CCZ", "title": "Jaccard: 0.89", "to": "KC4CCW", "value": 0.8870967741935484}, {"font": {"size": 200}, "from": "KC4CCZ", "title": "Jaccard: 0.68", "to": "KC4CJC", "value": 0.6825396825396826}, {"font": {"size": 200}, "from": "KC4CJC", "title": "Jaccard: 0.69", "to": "KC4C41", "value": 0.6911764705882353}, {"font": {"size": 200}, "from": "KC4CJC", "title": "Jaccard: 0.67", "to": "KC4C44", "value": 0.6666666666666666}, {"font": {"size": 200}, "from": "KC4CJC", "title": "Jaccard: 0.73", "to": "KC4C4C", "value": 0.7313432835820896}, {"font": {"size": 200}, "from": "KC4CJC", "title": "Jaccard: 0.67", "to": "KC4C4E", "value": 0.6666666666666666}, {"font": {"size": 200}, "from": "KC4CJC", "title": "Jaccard: 0.69", "to": "KC4C4R", "value": 0.6865671641791045}, {"font": {"size": 200}, "from": "KC4CJC", "title": "Jaccard: 0.67", "to": "KC4CCJ", "value": 0.671875}, {"font": {"size": 200}, "from": "KC4CJC", "title": "Jaccard: 0.73", "to": "KC4CCQ", "value": 0.7258064516129032}, {"font": {"size": 200}, "from": "KC4CJC", "title": "Jaccard: 0.68", "to": "KC4CCW", "value": 0.676923076923077}, {"font": {"size": 200}, "from": "KC4C41", "title": "Jaccard: 0.94", "to": "KC4C44", "value": 0.9411764705882353}, {"font": {"size": 200}, "from": "KC4C41", "title": "Jaccard: 0.93", "to": "KC4C4C", "value": 0.927536231884058}, {"font": {"size": 200}, "from": "KC4C41", "title": "Jaccard: 0.87", "to": "KC4C4E", "value": 0.8676470588235294}, {"font": {"size": 200}, "from": "KC4C41", "title": "Jaccard: 0.88", "to": "KC4C4R", "value": 0.8840579710144928}, {"font": {"size": 200}, "from": "KC4C41", "title": "Jaccard: 0.82", "to": "KC4CCJ", "value": 0.8235294117647058}, {"font": {"size": 200}, "from": "KC4C41", "title": "Jaccard: 0.80", "to": "KC4CCQ", "value": 0.7971014492753623}, {"font": {"size": 200}, "from": "KC4C41", "title": "Jaccard: 0.80", "to": "KC4CCW", "value": 0.8}, {"font": {"size": 200}, "from": "KC4C44", "title": "Jaccard: 0.93", "to": "KC4C4C", "value": 0.927536231884058}, {"font": {"size": 200}, "from": "KC4C44", "title": "Jaccard: 0.87", "to": "KC4C4E", "value": 0.8676470588235294}, {"font": {"size": 200}, "from": "KC4C44", "title": "Jaccard: 0.88", "to": "KC4C4R", "value": 0.8840579710144928}, {"font": {"size": 200}, "from": "KC4C44", "title": "Jaccard: 0.82", "to": "KC4CCJ", "value": 0.8235294117647058}, {"font": {"size": 200}, "from": "KC4C44", "title": "Jaccard: 0.80", "to": "KC4CCQ", "value": 0.7971014492753623}, {"font": {"size": 200}, "from": "KC4C44", "title": "Jaccard: 0.83", "to": "KC4CCW", "value": 0.8260869565217391}, {"font": {"size": 200}, "from": "KC4C4C", "title": "Jaccard: 0.86", "to": "KC4C4E", "value": 0.855072463768116}, {"font": {"size": 200}, "from": "KC4C4C", "title": "Jaccard: 0.96", "to": "KC4C4R", "value": 0.9552238805970149}, {"font": {"size": 200}, "from": "KC4C4C", "title": "Jaccard: 0.81", "to": "KC4CCJ", "value": 0.8115942028985508}, {"font": {"size": 200}, "from": "KC4C4C", "title": "Jaccard: 0.81", "to": "KC4CCQ", "value": 0.8115942028985508}, {"font": {"size": 200}, "from": "KC4C4C", "title": "Jaccard: 0.84", "to": "KC4CCW", "value": 0.8405797101449275}, {"font": {"size": 200}, "from": "KC4C4E", "title": "Jaccard: 0.81", "to": "KC4C4R", "value": 0.8115942028985508}, {"font": {"size": 200}, "from": "KC4C4E", "title": "Jaccard: 0.86", "to": "KC4CCJ", "value": 0.859375}, {"font": {"size": 200}, "from": "KC4C4E", "title": "Jaccard: 0.83", "to": "KC4CCQ", "value": 0.8307692307692308}, {"font": {"size": 200}, "from": "KC4C4E", "title": "Jaccard: 0.86", "to": "KC4CCW", "value": 0.8615384615384616}, {"font": {"size": 200}, "from": "KC4C4R", "title": "Jaccard: 0.77", "to": "KC4CCJ", "value": 0.7681159420289855}, {"font": {"size": 200}, "from": "KC4C4R", "title": "Jaccard: 0.82", "to": "KC4CCQ", "value": 0.8208955223880597}, {"font": {"size": 200}, "from": "KC4C4R", "title": "Jaccard: 0.82", "to": "KC4CCW", "value": 0.8235294117647058}, {"font": {"size": 200}, "from": "KC4CCJ", "title": "Jaccard: 0.87", "to": "KC4CCQ", "value": 0.8709677419354839}, {"font": {"size": 200}, "from": "KC4CCJ", "title": "Jaccard: 0.82", "to": "KC4CCW", "value": 0.8153846153846154}, {"font": {"size": 200}, "from": "KC4CCQ", "title": "Jaccard: 0.82", "to": "KC4CCW", "value": 0.8153846153846154}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.3,
+            "damping": 0.09,
+            "gravitationalConstant": -80000,
+            "springConstant": 0.001,
+            "springLength": 250
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
