@@ -12,7 +12,7 @@
 - [x] [4.Churn Scoring](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/blob/f59d1957f5b3f16207ca29e07bd55065d29cad6b/04%20-%20Churn%20Scoring/README)  
 [![](https://img.shields.io/badge/-Classification-orange)](#) [![](https://img.shields.io/badge/-Student-blue)](#)
 
-- [x] [5.Customer Segmentation and Recommendation](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/blob/f59d1957f5b3f16207ca29e07bd55065d29cad6b/05%20-%20Customer%20Segmentation/README)  
+- [x] [5.Customer Segmentation and Product Recommendation](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/blob/f59d1957f5b3f16207ca29e07bd55065d29cad6b/05%20-%20Customer%20Segmentation/README)  
 [![](https://img.shields.io/badge/-K--Means-orange)](#) [![](https://img.shields.io/badge/-Classification-orange)](#) [![](https://img.shields.io/badge/-Student-blue)](#)
 
 - [x] [6.Voice of Customer Analytics](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/blob/f59d1957f5b3f16207ca29e07bd55065d29cad6b/06%20-%20Voice%20of%20Customer/README)  
