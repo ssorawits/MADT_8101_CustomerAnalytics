@@ -6,7 +6,7 @@
 - [x] [2. Customer Insight Analysis](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/blob/7ff8d5915adbe9ac951f153724b994c353445565/02%20-%20Customer%20Insight%20Analysis/README.md)  
 [![](https://img.shields.io/badge/-Concept-green)](#) [![](https://img.shields.io/badge/-Presentation-green)](#) [![](https://img.shields.io/badge/-Student-blue)](#)
 
-- [x] [3.Customer Lifetime Value](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/blob/7ff8d5915adbe9ac951f153724b994c353445565/03%20-%20CLV/README.md)](#)
+- [x] [3.Customer Lifetime Value](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/blob/0c387b9dca80751a8f3269507e228de8d036f204/03%20-%20CLV/README.md)  
 [![](https://img.shields.io/badge/-Concept-green)](#) [![](https://img.shields.io/badge/-Presentation-green)](#) [![](https://img.shields.io/badge/-Student-blue)](#)
 
 - [x] [4.Churn Scoring](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/blob/7ff8d5915adbe9ac951f153724b994c353445565/04%20-%20Churn%20Scoring/README.md)  
