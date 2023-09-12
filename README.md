@@ -17,3 +17,6 @@
 
 - [x] [6.Voice of Customer Analytics](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/blob/1e37a9318356ace5817d1aad061fa5102295dff1/06%20-%20Voice%20of%20Customer/README.md)  
 [![](https://img.shields.io/badge/-Python-green)](#) [![](https://img.shields.io/badge/-Topic--Modeling-orange)](#) [![](https://img.shields.io/badge/-NLP-orange)](#) [![](https://img.shields.io/badge/-student-blue)](#)
+
+
+6420422020 Sorawit Sinlapanurak
