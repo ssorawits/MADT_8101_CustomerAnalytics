@@ -23,23 +23,22 @@ HDI is a distribution company that offers a diverse range of efficacious health 
 ![image](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/a380495b-2607-4cb4-9ba4-d85caa409f05)
 
 ## Customer Proportion and Sales Proportion
-![14](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/ad57d575-318a-4567-9ba5-3355da877213)
+![14](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/0b7246d5-66a1-4d42-8d55-3193d0d683da)
 
 ## Customer Number and Sales
 ![15](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/3e1c4713-ff5e-43a8-8058-8cdcc2aa78b3)
 
 ## Customer Segmentation Movement
 ![image](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/3a9a8eef-07a4-435a-9539-82231b0b4c51)
-![image](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/b2310593-e798-4e93-8933-0443953a572f)
+![image](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/0004e75d-152b-4f4f-8301-07bbf596fcf8)
 
-## Revenue Forecast
-![18](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/b71350fe-3e0b-4dee-9bdb-92c7f24a163b)
+## Sales Forecast
+![18](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/ad64fa05-3580-4182-9177-5b7b57c577c4)
 
 ## Marketing Strategies
-![19](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/7e190b1f-2d0e-4068-8191-98ca8806d5af)
+![19](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/0fb2f804-4de2-45ba-99c3-9e6643294a19)
 
 # Product Recommendation
-
 ![21](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/92bcc04b-c21a-494f-8653-78c9163db025)
 ![22](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/1a99b476-eb98-4f1e-8e19-9abdd31a65c2)
 ![23](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/b892ce8f-248c-40c4-9c99-e1f7e435896d)
