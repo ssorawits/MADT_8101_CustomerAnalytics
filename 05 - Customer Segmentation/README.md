@@ -20,7 +20,7 @@ HDI is a distribution company that offers a diverse range of efficacious health 
 
 ## Customer Behavior
 ![12](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/4e31483e-8c6b-437c-87db-708419aa1fff)
-![image](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/a380495b-2607-4cb4-9ba4-d85caa409f05)
+![1696171767048](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/49571368-4cf7-4e71-8c3c-88d5e210c213)
 
 ## Customer Proportion and Sales Proportion
 ![14](https://github.com/ssorawits/MADT_8101_CustomerAnalytics/assets/99993025/0b7246d5-66a1-4d42-8d55-3193d0d683da)
