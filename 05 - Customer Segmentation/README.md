@@ -1,5 +1,5 @@
 # Customer Segmentation
-## WordPress: https://ssorawits.wordpress.com/2023/10/01/customer-segmentation-with-k-means-clustering/
+[![](https://img.shields.io/badge/-WordPress-green)](https://ssorawits.wordpress.com/2023/10/01/customer-segmentation-with-k-means-clustering/?fbclid=IwAR0u22Z1lhUqJb5vCoVyXoFPmy2drXsVSfUYyT5MmflDpYRWGDapYQefOHE)
 
 ## Dataset
 HDI is a distribution company that offers a diverse range of efficacious health products designed to meet the demands of contemporary lifestyles. Our product offerings encompass health supplements, specifically tailored for both adults and children, wholesome food and beverage options, as well as natural personal care and skincare solutions.
